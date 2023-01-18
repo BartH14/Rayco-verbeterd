@@ -39,7 +39,7 @@ namespace Rayco_Planner
             Project carriere = new Project("Carrière stress", "Bart", OverspannenRaken);
 
             //projectlid 28 jaar na dato nog eens maken
-            ProjectLid Bart = projectLeden.FirstOrDefault(projectlid => projectlid.VoorNaam == "Bart");
+            ProjectLid Bart = projectLeden.FirstOrDefault(projectlid => projectlid.Naam == "Bart Haagmans");
 
             //projectlid toevoegen aan het project
             carriere.TaakToewijzen(0, Bart);

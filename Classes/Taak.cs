@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rayco_Planner.Classes
 {
-    internal class Taak
+    public class Taak
     {
         public int Id { get; private set; }
         public DeelTaak deelTaak { get; private set; }

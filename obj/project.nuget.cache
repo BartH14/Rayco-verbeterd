@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0lG3Klh6+QzXjaWxwhcD7M2PgDHJOjlALKqRjjInUBOKt3dFfvXVudBV2jt9ar5hhqFe3goaSNnpxRAq+WwMVw==",
+  "dgSpecHash": "YNWJl5owNNSubjPGBC3B4L2Zc1uvure9E6FFwxQNUvFv6B03QG71SHdu+z3rLu2bemdqUQ+6IQ2N5W8FmpR1DQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\barth\\source\\repos\\Rayco-Planner\\Rayco-Planner.csproj",
+  "projectFilePath": "C:\\Users\\barth\\Source\\Repos\\Rayco-verbeterd\\Rayco-Planner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barth\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\barth\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

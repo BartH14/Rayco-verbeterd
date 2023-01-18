@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rayco_Planner.Classes
 {
-    internal class ProjectSoort
+    public class ProjectSoort
     {
         public string Naam { get; }
         public List<DeelTaak> ProjectDeelTaken { get; set; } = new List<DeelTaak>();

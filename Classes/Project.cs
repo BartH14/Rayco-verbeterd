@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Rayco_Planner.Classes
 {
-    internal class Project
+    public class Project
     {
         public string Naam { get; private set; }
         public string Opdrachtgever { get; private set; }
