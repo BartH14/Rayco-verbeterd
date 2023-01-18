@@ -22,6 +22,6 @@ Vervolgens kun je er op los projecten.
 - [X] Projectsoorten
 - [X] Design Patterns
 - [X] Aantal classen ~~unfucken~~ verbeteren :shipit:
-- [] Doorlooptijd berekenen
-- [] Spiksplinternieuwe bugs fixen
-- [] Unittesten schrijven
+- [ ] Doorlooptijd berekenen
+- [ ] Spiksplinternieuwe bugs fixen
+- [ ] Unittesten schrijven
