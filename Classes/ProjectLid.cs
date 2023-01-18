@@ -15,11 +15,10 @@ namespace Rayco_Planner.Classes
         public List<Project> ToegewezenProjecten { get; set; } = new List<Project> { };
         public List<Taak> ToegewezenTaken { get; set; } = new List<Taak> { };
 
-        public ProjectLid(int id, string naam, string rol)
+        public ProjectLid(int id, string naam)
         {
             Id = id;
             Naam = naam;
-            Rol = rol;
         }
     }
 }
