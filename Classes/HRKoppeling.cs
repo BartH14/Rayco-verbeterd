@@ -46,6 +46,7 @@ namespace Rayco_Planner.Classes
             {
                 //krijgt de response van de api als een string
                 var jsonString = stringTask.Result;
+                Console.WriteLine(jsonString);
 
                 // Deserialize the JSON string naar een list van ProjectLid objecten
                 list = JsonSerializer.Deserialize<List<ProjectLid>>(jsonString);

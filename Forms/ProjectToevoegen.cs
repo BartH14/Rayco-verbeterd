@@ -27,7 +27,7 @@ namespace Rayco_Planner.Forms
         {
             foreach (ProjectLid projectlid in projectleden)
             {
-                ProjectLedenBox.Items.Add(projectlid.VoorNaam + " " + projectlid.AchterNaam);
+                ProjectLedenBox.Items.Add(projectlid.Naam);
             }
 
             foreach (ProjectSoort projectSoort in projectsoort)
