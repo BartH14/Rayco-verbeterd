@@ -46,8 +46,6 @@ namespace Rayco_Planner.Forms
             {
                 MessageBox.Show("Gebruikersnaam of wachtwoord is onjuist!");
             }
-
-
         }
 
         private void InlogScherm_Load(object sender, EventArgs e)
