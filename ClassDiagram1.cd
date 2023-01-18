@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RayCo_PMS_PC.DBConnectie">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAAAAAAAAAAAIACQAAAAAAAAAAAIEQAAABAA=</HashCode>
+      <FileName>Classes\DBConnectie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rayco_Planner.Classes.DeelTaak">
+    <Position X="8" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAEAAAAAAAAAAAAAAEQAAAgAQAAAAAAEAAAA=</HashCode>
+      <FileName>Classes\DeelTaak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rayco_Planner.Classes.HRKoppeling">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAACAAAAAAAAAgAAAIACAAEACA=</HashCode>
+      <FileName>Classes\HRKoppeling.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProjectLid" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Rayco_Planner.Program">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAgAAAAAAAIAAAACAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DBConnectie" />
+      <Property Name="HRKoppeling" />
+      <Property Name="ProjectSoort" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Rayco_Planner.Classes.ProjectLid">
+    <Position X="6.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAIAAAAQABAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\ProjectLid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rayco_Planner.Classes.ProjectSoort">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAADIAAAAAAAAAAAUCAAAAAAAA=</HashCode>
+      <FileName>Classes\ProjectSoort.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DeelTaak" />
+      <Property Name="Taak" />
+      <Property Name="ProjectLid" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Rayco_Planner.Classes.Taak">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAgAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Classes\Taak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

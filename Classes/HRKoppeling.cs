@@ -16,7 +16,7 @@ namespace Rayco_Planner.Classes
         private readonly HttpClient httpClient = new HttpClient();
 
         private static HRKoppeling instantie;
-                
+
         //singleton pattern
         public static HRKoppeling GetInstantie()
         {
@@ -48,7 +48,7 @@ namespace Rayco_Planner.Classes
 
                 IDictionary<string, string>? employeeIndex = JsonSerializer.Deserialize<IDictionary<string, string>>(jsonString);
 
-                if(employeeIndex != null)
+                if (employeeIndex != null)
                 {
                     foreach (var item in employeeIndex)
                     {
@@ -60,11 +60,19 @@ namespace Rayco_Planner.Classes
 
                 Console.WriteLine("Oepsiepoepsie");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine($"HR systeemfout {e}");
             }
             return null;
+        }
+
+        public ProjectLid ProjectLid
+        {
+            get => default;
+            set
+            {
+            }
         }
     }
 }

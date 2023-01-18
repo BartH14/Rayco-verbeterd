@@ -11,6 +11,30 @@ namespace Rayco_Planner.Classes
         public string Naam { get; }
         public List<DeelTaak> ProjectDeelTaken { get; set; } = new List<DeelTaak>();
 
+        public DeelTaak DeelTaak
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Taak Taak
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public ProjectLid ProjectLid
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public ProjectSoort(string naam)
         {
             Naam = naam;

@@ -52,5 +52,10 @@ namespace Rayco_Planner.Forms
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            DBConnectie.DBserver = textBox1.Text;
+        }
     }
 }

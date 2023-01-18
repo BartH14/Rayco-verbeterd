@@ -11,7 +11,8 @@ namespace RayCo_PMS_PC
     {
         private static DBConnectie _instantie;
         readonly public static string DBnaam = "PMS";
-        public SqlConnection verbinding = new SqlConnection($"Server=(local); Database={DBnaam}; Integrated Security=true");
+        public static string DBserver = "DESKTOP-2QJQJ3G";
+        public SqlConnection verbinding = new SqlConnection($"Server={DBserver}; Database={DBnaam}; Integrated Security=true");
 
         // private constructor maken om externe instantiëring te voorkomen
         private DBConnectie() { }
@@ -46,7 +47,7 @@ namespace RayCo_PMS_PC
         public bool LogGebruikerIn(string gebruikersnaam, string wachtwoord)
         {
             openVerbinding();
-            string query = $"SELECT * FROM Gebruikers WHERE Gebruikersnaam = '{gebruikersnaam}' AND Wachtwoord = '{wachtwoord}'";
+            string query = $"SELECT * FROM Projectleden WHERE Gebruikersnaam = '{gebruikersnaam}' AND Wachtwoord = '{wachtwoord}'";
             SqlCommand command = new SqlCommand(query, verbinding);
             SqlDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
@@ -65,7 +66,7 @@ namespace RayCo_PMS_PC
         public bool GebruikersRol( string gebruikersnaam)
         {
             openVerbinding();
-            string query = $"SELECT * FROM Gebruikers WHERE Gebruikersnaam = '{gebruikersnaam}' AND adminrechten = '1'";
+            string query = $"SELECT * FROM Projectleden WHERE Gebruikersnaam = '{gebruikersnaam}' AND adminrechten = '1'";
             SqlCommand command = new SqlCommand(query, verbinding);
             SqlDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
