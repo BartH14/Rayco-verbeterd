@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\barth\\Source\\Repos\\Rayco-verbeterd\\Rayco-Planner.csproj": {}
+    "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\barth\\Source\\Repos\\Rayco-verbeterd\\Rayco-Planner.csproj": {
+    "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\barth\\Source\\Repos\\Rayco-verbeterd\\Rayco-Planner.csproj",
+        "projectUniqueName": "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj",
         "projectName": "Rayco-Planner",
-        "projectPath": "C:\\Users\\barth\\Source\\Repos\\Rayco-verbeterd\\Rayco-Planner.csproj",
+        "projectPath": "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj",
         "packagesPath": "C:\\Users\\barth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\barth\\Source\\Repos\\Rayco-verbeterd\\obj\\",
+        "outputPath": "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\barth\\AppData\\Roaming\\NuGet\\NuGet.Config",

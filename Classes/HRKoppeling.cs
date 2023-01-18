@@ -11,6 +11,7 @@ namespace Rayco_Planner.Classes
 {
     internal class HRKoppeling
     {
+        private readonly JsonSerializerOptions jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         private readonly string baseURL;
         private readonly HttpClient httpClient = new HttpClient();
 
@@ -33,12 +34,13 @@ namespace Rayco_Planner.Classes
         }
 
         //methode die een list met projectleden objecten ophaalt van de API
-        public IDictionary<string, string> HaalProjectLedenOp()
+        public List<ProjectLid> HaalProjectLedenOp()
         {
             httpClient.DefaultRequestHeaders.Clear();
             httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
             var stringTask = httpClient.GetStringAsync(baseURL + "/employees");
+            List<ProjectLid> projectleden = new List<ProjectLid>();
 
             try
             {
@@ -48,8 +50,13 @@ namespace Rayco_Planner.Classes
 
                 if(employeeIndex != null)
                 {
-                    return employeeIndex;
+                    foreach (var item in employeeIndex)
+                    {
+                        ProjectLid projectlid = new ProjectLid(Convert.ToInt32(item.Key), item.Value);
+                        projectleden.Add(projectlid);
+                    }
                 }
+                return projectleden;
 
                 Console.WriteLine("Oepsiepoepsie");
             }
