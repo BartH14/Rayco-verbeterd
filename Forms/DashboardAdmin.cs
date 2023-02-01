@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,12 +17,23 @@ namespace Rayco_Planner.Forms
     {
         List<ProjectLid> projectleden = new List<ProjectLid>();
         List<ProjectSoort> projectsoorten = new List<ProjectSoort>();
+        List<Project> projecten = new List<Project>();
+        private ProjectLid gebruiker;
+        private Project gekozenProject;
 
         public DashboardAdmin(List<ProjectLid> projectleden, List<ProjectSoort> projectsoorten)
         {
             InitializeComponent();
+            ProjectLid gebruiker = projectleden[2];
             this.projectleden = projectleden;
             this.projectsoorten = projectsoorten;
+
+            foreach (Project project in gebruiker.ToegewezenProjecten)
+            {
+                ProjectenLijst.Items.Add(project.Naam);
+            }
+
+            gekozenProject = gebruiker.ToegewezenProjecten[0];
         }
 
         private void projectToevoegenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,7 +53,13 @@ namespace Rayco_Planner.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            foreach (Project project in gebruiker.ToegewezenProjecten)
+            {
+                if (project.Naam == ProjectenLijst.SelectedItem.ToString())
+                {
+                    gekozenProject = project;
+                }
+            }
         }
     }
 }

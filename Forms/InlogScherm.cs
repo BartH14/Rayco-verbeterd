@@ -34,12 +34,12 @@ namespace Rayco_Planner.Forms
                 if(dBConnectie.GebruikersRol(GebruikersnaamVeld.Text))
                 {
                     new DashboardAdmin(projectleden, projectsoorten).Show();
-                    this.Close();
+                    //this.Close();
                 }
                 else
                 {
                     new DashboardGebruiker(projectleden, projectsoorten).Show();
-                    this.Close();
+                    //this.Close();
                 }
             }
             else

@@ -39,20 +39,22 @@
             this.projectledenOverviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectledenToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ProjectenLijst = new System.Windows.Forms.ComboBox();
             this.HoofdMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // HoofdMenuStrip
             // 
             this.HoofdMenuStrip.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HoofdMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.HoofdMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startschermToolStripMenuItem,
             this.projectenToolStripMenuItem,
             this.projectledenToolStripMenuItem});
             this.HoofdMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.HoofdMenuStrip.Name = "HoofdMenuStrip";
-            this.HoofdMenuStrip.Size = new System.Drawing.Size(800, 33);
+            this.HoofdMenuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.HoofdMenuStrip.Size = new System.Drawing.Size(914, 42);
             this.HoofdMenuStrip.TabIndex = 0;
             this.HoofdMenuStrip.Text = "menuStrip1";
             this.HoofdMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.HoofdMenuStrip_ItemClicked);
@@ -60,7 +62,7 @@
             // startschermToolStripMenuItem
             // 
             this.startschermToolStripMenuItem.Name = "startschermToolStripMenuItem";
-            this.startschermToolStripMenuItem.Size = new System.Drawing.Size(123, 29);
+            this.startschermToolStripMenuItem.Size = new System.Drawing.Size(153, 36);
             this.startschermToolStripMenuItem.Text = "Startscherm";
             // 
             // projectenToolStripMenuItem
@@ -71,31 +73,31 @@
             this.projectSoortenToolStripMenuItem,
             this.projectToevoegenToolStripMenuItem});
             this.projectenToolStripMenuItem.Name = "projectenToolStripMenuItem";
-            this.projectenToolStripMenuItem.Size = new System.Drawing.Size(104, 29);
+            this.projectenToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
             this.projectenToolStripMenuItem.Text = "Projecten";
             // 
             // projectOverviewToolStripMenuItem
             // 
             this.projectOverviewToolStripMenuItem.Name = "projectOverviewToolStripMenuItem";
-            this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
+            this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(297, 36);
             this.projectOverviewToolStripMenuItem.Text = "Project overview";
             // 
             // takenToolStripMenuItem
             // 
             this.takenToolStripMenuItem.Name = "takenToolStripMenuItem";
-            this.takenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
+            this.takenToolStripMenuItem.Size = new System.Drawing.Size(297, 36);
             this.takenToolStripMenuItem.Text = "Project soorten";
             // 
             // projectSoortenToolStripMenuItem
             // 
             this.projectSoortenToolStripMenuItem.Name = "projectSoortenToolStripMenuItem";
-            this.projectSoortenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
+            this.projectSoortenToolStripMenuItem.Size = new System.Drawing.Size(297, 36);
             this.projectSoortenToolStripMenuItem.Text = "Project taken";
             // 
             // projectToevoegenToolStripMenuItem
             // 
             this.projectToevoegenToolStripMenuItem.Name = "projectToevoegenToolStripMenuItem";
-            this.projectToevoegenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
+            this.projectToevoegenToolStripMenuItem.Size = new System.Drawing.Size(297, 36);
             this.projectToevoegenToolStripMenuItem.Text = "Project toevoegen";
             this.projectToevoegenToolStripMenuItem.Click += new System.EventHandler(this.projectToevoegenToolStripMenuItem_Click);
             // 
@@ -105,48 +107,51 @@
             this.projectledenOverviewToolStripMenuItem,
             this.projectledenToevoegenToolStripMenuItem});
             this.projectledenToolStripMenuItem.Name = "projectledenToolStripMenuItem";
-            this.projectledenToolStripMenuItem.Size = new System.Drawing.Size(130, 29);
+            this.projectledenToolStripMenuItem.Size = new System.Drawing.Size(161, 36);
             this.projectledenToolStripMenuItem.Text = "Projectleden";
             // 
             // projectledenOverviewToolStripMenuItem
             // 
             this.projectledenOverviewToolStripMenuItem.Name = "projectledenOverviewToolStripMenuItem";
-            this.projectledenOverviewToolStripMenuItem.Size = new System.Drawing.Size(284, 30);
+            this.projectledenOverviewToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
             this.projectledenOverviewToolStripMenuItem.Text = "Projectleden overview";
             // 
             // projectledenToevoegenToolStripMenuItem
             // 
             this.projectledenToevoegenToolStripMenuItem.Name = "projectledenToevoegenToolStripMenuItem";
-            this.projectledenToevoegenToolStripMenuItem.Size = new System.Drawing.Size(284, 30);
+            this.projectledenToevoegenToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
             this.projectledenToevoegenToolStripMenuItem.Text = "Projectleden toevoegen";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 83);
+            this.richTextBox1.Location = new System.Drawing.Point(14, 111);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(776, 355);
+            this.richTextBox1.Size = new System.Drawing.Size(886, 472);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
-            // comboBox1
+            // ProjectenLijst
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(218, 33);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.ProjectenLijst.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ProjectenLijst.FormattingEnabled = true;
+            this.ProjectenLijst.Location = new System.Drawing.Point(14, 48);
+            this.ProjectenLijst.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ProjectenLijst.Name = "ProjectenLijst";
+            this.ProjectenLijst.Size = new System.Drawing.Size(223, 39);
+            this.ProjectenLijst.TabIndex = 3;
+            this.ProjectenLijst.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // DashboardAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.ProjectenLijst);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.HoofdMenuStrip);
             this.MainMenuStrip = this.HoofdMenuStrip;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DashboardAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardAdmin";
@@ -171,6 +176,6 @@
         private ToolStripMenuItem projectledenOverviewToolStripMenuItem;
         private ToolStripMenuItem projectledenToevoegenToolStripMenuItem;
         private RichTextBox richTextBox1;
-        private ComboBox comboBox1;
+        private ComboBox ProjectenLijst;
     }
 }

@@ -1,4 +1,8 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\Classes"
+  ],
+  "SelectedNode": "\\Classes\\DBConnectie.cs",
   "PreviewInSolutionExplorer": false
 }

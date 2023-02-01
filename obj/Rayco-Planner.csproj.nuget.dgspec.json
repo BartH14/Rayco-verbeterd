@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj": {}
+    "C:\\Users\\barth\\source\\repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj": {
+    "C:\\Users\\barth\\source\\repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj",
+        "projectUniqueName": "C:\\Users\\barth\\source\\repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj",
         "projectName": "Rayco-Planner",
-        "projectPath": "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj",
+        "projectPath": "C:\\Users\\barth\\source\\repos\\BartH14\\Rayco-verbeterd\\Rayco-Planner.csproj",
         "packagesPath": "C:\\Users\\barth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\barth\\Source\\Repos\\BartH14\\Rayco-verbeterd\\obj\\",
+        "outputPath": "C:\\Users\\barth\\source\\repos\\BartH14\\Rayco-verbeterd\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\barth\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

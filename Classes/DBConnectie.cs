@@ -11,7 +11,7 @@ namespace RayCo_PMS_PC
     {
         private static DBConnectie _instantie;
         readonly public static string DBnaam = "PMS";
-        public static string DBserver = "DESKTOP-2QJQJ3G";
+        public static string DBserver = "(local)";
         public SqlConnection verbinding = new SqlConnection($"Server={DBserver}; Database={DBnaam}; Integrated Security=true");
 
         // private constructor maken om externe instantiëring te voorkomen

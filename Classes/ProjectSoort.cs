@@ -11,30 +11,6 @@ namespace Rayco_Planner.Classes
         public string Naam { get; }
         public List<DeelTaak> ProjectDeelTaken { get; set; } = new List<DeelTaak>();
 
-        public DeelTaak DeelTaak
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public Taak Taak
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public ProjectLid ProjectLid
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public ProjectSoort(string naam)
         {
             Naam = naam;
@@ -61,6 +37,25 @@ namespace Rayco_Planner.Classes
                 return true;
             }
             else return false;
+        }
+        public bool controleerKeten()
+        {
+            foreach (DeelTaak taak in ProjectDeelTaken)
+            {
+                if (taak.VoorgaandeTaak.Count == 0)
+                {
+                    continue;
+                }
+
+                foreach (DeelTaak voorgaandeTaak in taak.VoorgaandeTaak)
+                {
+                    foreach (DeelTaak overVoorgaandeTaak in voorgaandeTaak.VoorgaandeTaak)
+                    {
+                        if (overVoorgaandeTaak.Id == taak.Id) return true;
+                    }
+                }
+            }
+            return false;
         }
    }
 }

@@ -60,23 +60,39 @@ namespace Rayco_Planner
             DeelTaak VacaturesAfstruinen = new DeelTaak(2, "Vacatures afstruinen", "Moedeloos worden van HR en recruiters", 1, 5, "developer", null, 1);
             DeelTaak AfgewezenWorden = new DeelTaak(3, "Afgewezen worden", "Sorry, een andere kandidaat had een beter profiel", 1, 1, "developer", new List<DeelTaak> { StressErvaren, VacaturesAfstruinen }, 1);
 
+            DeelTaak SpeciaalBierHalen = new DeelTaak(1, "Speciaalbier halen", "Een gecureerde lijst van untappd afplukken", 1, 5, "Developer", null, 1);
+            DeelTaak BitterBallenFrituren = new DeelTaak(2, "Bitterballen frituren", "Een droogje voor bij het natje", 1, 2, "Developer", new List<DeelTaak> { SpeciaalBierHalen }, 1);
+
+
             //deeltaken aan een projectsoort toevoegen
             OverspannenRaken.VoegDeelTaakToe(StressErvaren);
             OverspannenRaken.VoegDeelTaakToe(VacaturesAfstruinen);
             OverspannenRaken.VoegDeelTaakToe(AfgewezenWorden);
 
+            MiBoPlannen.VoegDeelTaakToe(SpeciaalBierHalen);
+            MiBoPlannen.VoegDeelTaakToe(BitterBallenFrituren);
+
             projectSoorten.Add(OverspannenRaken);
 
             //project maken van projectsoort
             Project carriere = new Project("Carrière stress", "Bart", OverspannenRaken);
+            Project blokafronden = new Project("Blok afrond borrel", "Bart", MiBoPlannen);
+
 
             //projectlid 28 jaar na dato nog eens maken
             ProjectLid Bart = projectLeden.FirstOrDefault(projectlid => projectlid.Naam == "Bart Haagmans");
 
-            //projectlid toevoegen aan het project
+            //Projectlid toewijzen aan project
+            carriere.ProjectLidToevoegen(Bart);
+            blokafronden.ProjectLidToevoegen(Bart);
+
+            //projectlid de deeltaken toewijzen
             carriere.TaakToewijzen(0, Bart);
             carriere.TaakToewijzen(1, Bart);
             carriere.TaakToewijzen(2, Bart);
+
+            blokafronden.TaakToewijzen(0, Bart);
+            blokafronden.TaakToewijzen(1, Bart);
             
             //applicatie starten
             ApplicationConfiguration.Initialize();
