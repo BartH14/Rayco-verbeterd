@@ -65,7 +65,25 @@ namespace Rayco_Planner.Forms
         private void DoorlooptijdKnop_Click(object sender, EventArgs e)
         {
             int doorlooptijd = gekozenProject.projectSoort.berekenenMinimaleDoorlooptijd();
-            richTextBox1.Text = ($"De doorlooptijd is {doorlooptijd}");
+            richTextBox1.Text = ($"De doorlooptijd is {doorlooptijd}.");
+        }
+
+        private void KritiekePadKnop_Click(object sender, EventArgs e)
+        {
+            int kritiekepad = gekozenProject.projectSoort.berekenMaximaleDoorlooptijd();
+            richTextBox1.Text = ($"De maximale doorlooptijd is {kritiekepad}.");
+        }
+
+        private void TakenKnop_Click(object sender, EventArgs e)
+        {
+            List<Taak> mijntaken = gebruiker.ToegewezenTaken;
+
+            StringBuilder sb = new StringBuilder($"De volgende taken zijn aan {gebruiker.Naam} toegewezen:");
+            foreach (Taak taak in mijntaken)
+            {
+                sb.Append($"\n • {taak.deelTaak.TaakNaam} : {taak.deelTaak.Beschrijving}");
+            }
+            richTextBox1.Text = sb.ToString();
         }
     }
 }

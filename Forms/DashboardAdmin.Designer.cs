@@ -41,6 +41,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.ProjectenLijst = new System.Windows.Forms.ComboBox();
             this.DoorlooptijdKnop = new System.Windows.Forms.Button();
+            this.KritiekePadKnop = new System.Windows.Forms.Button();
+            this.TakenKnop = new System.Windows.Forms.Button();
             this.HoofdMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,11 +138,14 @@
             // 
             this.ProjectenLijst.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ProjectenLijst.FormattingEnabled = true;
+            this.ProjectenLijst.Items.AddRange(new object[] {
+            "Selecteer het project"});
             this.ProjectenLijst.Location = new System.Drawing.Point(14, 48);
             this.ProjectenLijst.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProjectenLijst.Name = "ProjectenLijst";
-            this.ProjectenLijst.Size = new System.Drawing.Size(223, 39);
+            this.ProjectenLijst.Size = new System.Drawing.Size(243, 39);
             this.ProjectenLijst.TabIndex = 3;
+            this.ProjectenLijst.Text = "Selecteer een project";
             this.ProjectenLijst.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // DoorlooptijdKnop
@@ -153,11 +158,33 @@
             this.DoorlooptijdKnop.UseVisualStyleBackColor = true;
             this.DoorlooptijdKnop.Click += new System.EventHandler(this.DoorlooptijdKnop_Click);
             // 
+            // KritiekePadKnop
+            // 
+            this.KritiekePadKnop.Location = new System.Drawing.Point(20, 168);
+            this.KritiekePadKnop.Name = "KritiekePadKnop";
+            this.KritiekePadKnop.Size = new System.Drawing.Size(217, 49);
+            this.KritiekePadKnop.TabIndex = 5;
+            this.KritiekePadKnop.Text = "Kritieke pad";
+            this.KritiekePadKnop.UseVisualStyleBackColor = true;
+            this.KritiekePadKnop.Click += new System.EventHandler(this.KritiekePadKnop_Click);
+            // 
+            // TakenKnop
+            // 
+            this.TakenKnop.Location = new System.Drawing.Point(20, 223);
+            this.TakenKnop.Name = "TakenKnop";
+            this.TakenKnop.Size = new System.Drawing.Size(217, 49);
+            this.TakenKnop.TabIndex = 6;
+            this.TakenKnop.Text = "Toegewezen taken";
+            this.TakenKnop.UseVisualStyleBackColor = true;
+            this.TakenKnop.Click += new System.EventHandler(this.TakenKnop_Click);
+            // 
             // DashboardAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.TakenKnop);
+            this.Controls.Add(this.KritiekePadKnop);
             this.Controls.Add(this.DoorlooptijdKnop);
             this.Controls.Add(this.ProjectenLijst);
             this.Controls.Add(this.richTextBox1);
@@ -190,5 +217,7 @@
         private RichTextBox richTextBox1;
         private ComboBox ProjectenLijst;
         private Button DoorlooptijdKnop;
+        private Button KritiekePadKnop;
+        private Button TakenKnop;
     }
 }
