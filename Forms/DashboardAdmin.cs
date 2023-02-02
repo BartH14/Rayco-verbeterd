@@ -24,7 +24,7 @@ namespace Rayco_Planner.Forms
         public DashboardAdmin(List<ProjectLid> projectleden, List<ProjectSoort> projectsoorten)
         {
             InitializeComponent();
-            ProjectLid gebruiker = projectleden[2];
+            this.gebruiker = projectleden[2];
             this.projectleden = projectleden;
             this.projectsoorten = projectsoorten;
 
@@ -60,6 +60,12 @@ namespace Rayco_Planner.Forms
                     gekozenProject = project;
                 }
             }
+        }
+
+        private void DoorlooptijdKnop_Click(object sender, EventArgs e)
+        {
+            int doorlooptijd = gekozenProject.projectSoort.berekenenMinimaleDoorlooptijd();
+            richTextBox1.Text = ($"De doorlooptijd is {doorlooptijd}");
         }
     }
 }

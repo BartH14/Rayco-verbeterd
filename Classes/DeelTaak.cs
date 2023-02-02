@@ -14,7 +14,7 @@ namespace Rayco_Planner.Classes
         public int MinimaleUren { get; set; }
         public int MaximaleUren { get; set; }
         public string Rol { get; set; }
-        public List<DeelTaak> VoorgaandeTaak { get; set; } = null;
+        public List<DeelTaak>? VoorgaandeTaak { get; set; } = null;
         public int TaakStatus { set; get; } = 0;
 
         public DeelTaak(int id, string taaknaam, string beschrijving, int minimaleuren, int maximaleuren, string rol, List<DeelTaak>? voorgaandetaak, int taakstatus)

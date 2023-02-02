@@ -40,6 +40,7 @@
             this.projectledenToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.ProjectenLijst = new System.Windows.Forms.ComboBox();
+            this.DoorlooptijdKnop = new System.Windows.Forms.Button();
             this.HoofdMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,10 +125,10 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(14, 111);
+            this.richTextBox1.Location = new System.Drawing.Point(259, 93);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(886, 472);
+            this.richTextBox1.Size = new System.Drawing.Size(623, 309);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
@@ -142,11 +143,22 @@
             this.ProjectenLijst.TabIndex = 3;
             this.ProjectenLijst.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // DoorlooptijdKnop
+            // 
+            this.DoorlooptijdKnop.Location = new System.Drawing.Point(20, 113);
+            this.DoorlooptijdKnop.Name = "DoorlooptijdKnop";
+            this.DoorlooptijdKnop.Size = new System.Drawing.Size(217, 49);
+            this.DoorlooptijdKnop.TabIndex = 4;
+            this.DoorlooptijdKnop.Text = "Doorlooptijd";
+            this.DoorlooptijdKnop.UseVisualStyleBackColor = true;
+            this.DoorlooptijdKnop.Click += new System.EventHandler(this.DoorlooptijdKnop_Click);
+            // 
             // DashboardAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.DoorlooptijdKnop);
             this.Controls.Add(this.ProjectenLijst);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.HoofdMenuStrip);
@@ -177,5 +189,6 @@
         private ToolStripMenuItem projectledenToevoegenToolStripMenuItem;
         private RichTextBox richTextBox1;
         private ComboBox ProjectenLijst;
+        private Button DoorlooptijdKnop;
     }
 }

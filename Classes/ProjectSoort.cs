@@ -49,13 +49,107 @@ namespace Rayco_Planner.Classes
 
                 foreach (DeelTaak voorgaandeTaak in taak.VoorgaandeTaak)
                 {
-                    foreach (DeelTaak overVoorgaandeTaak in voorgaandeTaak.VoorgaandeTaak)
+                    foreach (DeelTaak daarVoorgaandeTaak in voorgaandeTaak.VoorgaandeTaak)
                     {
-                        if (overVoorgaandeTaak.Id == taak.Id) return true;
+                        if (daarVoorgaandeTaak.Id == taak.Id) return true;
                     }
                 }
             }
             return false;
+        }
+        public int zoekMinimaleDoorlooptijd(DeelTaak taak)
+        {
+            int minimaleDoorloopTijd = taak.MinimaleUren;
+            if (taak.VoorgaandeTaak.Count == 0) return minimaleDoorloopTijd;
+            else if( taak.VoorgaandeTaak.Count == 1)
+            {
+                foreach (DeelTaak voorgaandeTaak in taak.VoorgaandeTaak)
+                {
+                    minimaleDoorloopTijd += zoekMinimaleDoorlooptijd(voorgaandeTaak);
+                }
+                return minimaleDoorloopTijd;
+            }
+            else
+            {
+                int langsteKeten = 0;
+                int ketenDuur = 0;
+                foreach (DeelTaak voorgaandetaak in taak.VoorgaandeTaak)
+                {
+                    ketenDuur = zoekMinimaleDoorlooptijd(voorgaandetaak);
+                    if (ketenDuur >= langsteKeten)
+                    {
+                        langsteKeten = ketenDuur;
+                    }
+                }
+                return langsteKeten + minimaleDoorloopTijd;
+            }
+        }
+
+        public int berekenenMinimaleDoorlooptijd()
+        {
+            int minimaledoorlooptijd = 0;
+
+            foreach(DeelTaak taak in ProjectDeelTaken)
+            {
+                if (zoekMinimaleDoorlooptijd(taak) >= minimaledoorlooptijd)
+                {
+                    minimaledoorlooptijd = zoekMinimaleDoorlooptijd(taak);
+                }
+            }
+            return minimaledoorlooptijd;
+        }
+
+        private int zoekMaximaleDoorlooptijd(DeelTaak taak)
+        {
+            int maximaledoorlooptijd = 0;
+            if (taak.VoorgaandeTaak.Count == 0) return maximaledoorlooptijd;
+            else if (taak.VoorgaandeTaak.Count == 1)
+            {
+                foreach (DeelTaak voorgaandetaak in taak.VoorgaandeTaak)
+                {
+                    maximaledoorlooptijd += zoekMaximaleDoorlooptijd(voorgaandetaak);
+                }
+                return maximaledoorlooptijd;
+            }
+            else
+            {
+                int langsteKeten = 0;
+                int ketenDuur = 0;
+                foreach (DeelTaak voorgaandetaak in taak.VoorgaandeTaak)
+                {
+                    ketenDuur = zoekMaximaleDoorlooptijd(voorgaandetaak);
+                    if (ketenDuur >= langsteKeten)
+                    {
+                        langsteKeten = ketenDuur;
+                    }
+                }
+                return langsteKeten + maximaledoorlooptijd;
+            }
+        }
+
+        public int berekenMaximaleDoorlooptijd()
+        {
+            int maximaledoorlooptijd = 0;
+
+            foreach(DeelTaak taak in ProjectDeelTaken)
+            {
+                if (zoekMaximaleDoorlooptijd(taak) > maximaledoorlooptijd)
+                {
+                    maximaledoorlooptijd = zoekMaximaleDoorlooptijd(taak);
+                }
+            }
+            return maximaledoorlooptijd;    
+        }
+
+        public int berekenUrenTotaal()
+        {
+            int urentotaal = 0;
+
+            foreach (DeelTaak taak in ProjectDeelTaken)
+            {
+                urentotaal += taak.MinimaleUren;
+            }
+            return urentotaal;
         }
    }
 }
