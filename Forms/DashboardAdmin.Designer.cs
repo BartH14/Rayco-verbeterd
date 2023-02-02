@@ -31,18 +31,14 @@
             this.HoofdMenuStrip = new System.Windows.Forms.MenuStrip();
             this.startschermToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectOverviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.takenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectSoortenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectledenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectledenOverviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectledenToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.ProjectenLijst = new System.Windows.Forms.ComboBox();
             this.DoorlooptijdKnop = new System.Windows.Forms.Button();
             this.KritiekePadKnop = new System.Windows.Forms.Button();
             this.TakenKnop = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.HoofdMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,8 +48,7 @@
             this.HoofdMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.HoofdMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startschermToolStripMenuItem,
-            this.projectenToolStripMenuItem,
-            this.projectledenToolStripMenuItem});
+            this.projectenToolStripMenuItem});
             this.HoofdMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.HoofdMenuStrip.Name = "HoofdMenuStrip";
             this.HoofdMenuStrip.Size = new System.Drawing.Size(800, 33);
@@ -70,31 +65,10 @@
             // projectenToolStripMenuItem
             // 
             this.projectenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.projectOverviewToolStripMenuItem,
-            this.takenToolStripMenuItem,
-            this.projectSoortenToolStripMenuItem,
             this.projectToevoegenToolStripMenuItem});
             this.projectenToolStripMenuItem.Name = "projectenToolStripMenuItem";
             this.projectenToolStripMenuItem.Size = new System.Drawing.Size(104, 29);
             this.projectenToolStripMenuItem.Text = "Projecten";
-            // 
-            // projectOverviewToolStripMenuItem
-            // 
-            this.projectOverviewToolStripMenuItem.Name = "projectOverviewToolStripMenuItem";
-            this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
-            this.projectOverviewToolStripMenuItem.Text = "Project overview";
-            // 
-            // takenToolStripMenuItem
-            // 
-            this.takenToolStripMenuItem.Name = "takenToolStripMenuItem";
-            this.takenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
-            this.takenToolStripMenuItem.Text = "Project soorten";
-            // 
-            // projectSoortenToolStripMenuItem
-            // 
-            this.projectSoortenToolStripMenuItem.Name = "projectSoortenToolStripMenuItem";
-            this.projectSoortenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
-            this.projectSoortenToolStripMenuItem.Text = "Project taken";
             // 
             // projectToevoegenToolStripMenuItem
             // 
@@ -102,27 +76,6 @@
             this.projectToevoegenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
             this.projectToevoegenToolStripMenuItem.Text = "Project toevoegen";
             this.projectToevoegenToolStripMenuItem.Click += new System.EventHandler(this.projectToevoegenToolStripMenuItem_Click);
-            // 
-            // projectledenToolStripMenuItem
-            // 
-            this.projectledenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.projectledenOverviewToolStripMenuItem,
-            this.projectledenToevoegenToolStripMenuItem});
-            this.projectledenToolStripMenuItem.Name = "projectledenToolStripMenuItem";
-            this.projectledenToolStripMenuItem.Size = new System.Drawing.Size(130, 29);
-            this.projectledenToolStripMenuItem.Text = "Projectleden";
-            // 
-            // projectledenOverviewToolStripMenuItem
-            // 
-            this.projectledenOverviewToolStripMenuItem.Name = "projectledenOverviewToolStripMenuItem";
-            this.projectledenOverviewToolStripMenuItem.Size = new System.Drawing.Size(284, 30);
-            this.projectledenOverviewToolStripMenuItem.Text = "Projectleden overview";
-            // 
-            // projectledenToevoegenToolStripMenuItem
-            // 
-            this.projectledenToevoegenToolStripMenuItem.Name = "projectledenToevoegenToolStripMenuItem";
-            this.projectledenToevoegenToolStripMenuItem.Size = new System.Drawing.Size(284, 30);
-            this.projectledenToevoegenToolStripMenuItem.Text = "Projectleden toevoegen";
             // 
             // richTextBox1
             // 
@@ -169,7 +122,7 @@
             // 
             // TakenKnop
             // 
-            this.TakenKnop.Location = new System.Drawing.Point(18, 167);
+            this.TakenKnop.Location = new System.Drawing.Point(18, 270);
             this.TakenKnop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TakenKnop.Name = "TakenKnop";
             this.TakenKnop.Size = new System.Drawing.Size(190, 37);
@@ -178,11 +131,35 @@
             this.TakenKnop.UseVisualStyleBackColor = true;
             this.TakenKnop.Click += new System.EventHandler(this.TakenKnop_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(18, 194);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 37);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Projectleden";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(18, 311);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(190, 37);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Taken in project";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // DashboardAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.TakenKnop);
             this.Controls.Add(this.KritiekePadKnop);
             this.Controls.Add(this.DoorlooptijdKnop);
@@ -206,17 +183,13 @@
         private MenuStrip HoofdMenuStrip;
         private ToolStripMenuItem startschermToolStripMenuItem;
         private ToolStripMenuItem projectenToolStripMenuItem;
-        private ToolStripMenuItem projectOverviewToolStripMenuItem;
-        private ToolStripMenuItem takenToolStripMenuItem;
-        private ToolStripMenuItem projectSoortenToolStripMenuItem;
         private ToolStripMenuItem projectToevoegenToolStripMenuItem;
-        private ToolStripMenuItem projectledenToolStripMenuItem;
-        private ToolStripMenuItem projectledenOverviewToolStripMenuItem;
-        private ToolStripMenuItem projectledenToevoegenToolStripMenuItem;
         private RichTextBox richTextBox1;
         private ComboBox ProjectenLijst;
         private Button DoorlooptijdKnop;
         private Button KritiekePadKnop;
         private Button TakenKnop;
+        private Button button1;
+        private Button button2;
     }
 }

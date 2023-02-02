@@ -103,9 +103,9 @@ namespace Rayco_Planner.Classes
 
         private int zoekMaximaleDoorlooptijd(DeelTaak taak)
         {
-            int maximaledoorlooptijd = 0;
+            int maximaledoorlooptijd = taak.MaximaleUren;
             if (taak.VoorgaandeTaak == null) return maximaledoorlooptijd;
-            else if (taak.VoorgaandeTaak.Count == 0) return maximaledoorlooptijd;
+            if (taak.VoorgaandeTaak.Count == 0) return maximaledoorlooptijd;
             else if (taak.VoorgaandeTaak.Count == 1)
             {
                 foreach (DeelTaak voorgaandetaak in taak.VoorgaandeTaak)
