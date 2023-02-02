@@ -17,7 +17,7 @@ namespace Rayco_Planner.Classes
             Naam = naam;
         }
 
-        public bool VoegDeelTaakToe (DeelTaak nieuweDeelTaak)
+        public bool VoegDeelTaakToe(DeelTaak nieuweDeelTaak)
         {
             foreach (DeelTaak deeltaak in ProjectDeelTaken)
             {
@@ -30,40 +30,12 @@ namespace Rayco_Planner.Classes
             return true;
         }
 
-        public bool VerwijderDeelTaak(DeelTaak deeltaak)
-        {
-            if (ProjectDeelTaken.Contains(deeltaak))
-            {
-                ProjectDeelTaken.Remove(deeltaak);
-                return true;
-            }
-            else return false;
-        }
-        public bool controleerKeten()
-        {
-            foreach (DeelTaak taak in ProjectDeelTaken)
-            {
-                if (taak.VoorgaandeTaak.Count == 0)
-                {
-                    continue;
-                }
-
-                foreach (DeelTaak voorgaandeTaak in taak.VoorgaandeTaak)
-                {
-                    foreach (DeelTaak daarVoorgaandeTaak in voorgaandeTaak.VoorgaandeTaak)
-                    {
-                        if (daarVoorgaandeTaak.Id == taak.Id) return true;
-                    }
-                }
-            }
-            return false;
-        }
         public int zoekMinimaleDoorlooptijd(DeelTaak taak)
         {
             int minimaleDoorloopTijd = taak.MinimaleUren;
             if (taak.VoorgaandeTaak == null) return minimaleDoorloopTijd;
             if (taak.VoorgaandeTaak.Count == 0) return minimaleDoorloopTijd;
-            else if( taak.VoorgaandeTaak.Count == 1)
+            else if (taak.VoorgaandeTaak.Count == 1)
             {
                 foreach (DeelTaak voorgaandeTaak in taak.VoorgaandeTaak)
                 {
@@ -91,7 +63,7 @@ namespace Rayco_Planner.Classes
         {
             int minimaledoorlooptijd = 0;
 
-            foreach(DeelTaak taak in ProjectDeelTaken)
+            foreach (DeelTaak taak in ProjectDeelTaken)
             {
                 if (zoekMinimaleDoorlooptijd(taak) >= minimaledoorlooptijd)
                 {
@@ -134,25 +106,14 @@ namespace Rayco_Planner.Classes
         {
             int maximaledoorlooptijd = 0;
 
-            foreach(DeelTaak taak in ProjectDeelTaken)
+            foreach (DeelTaak taak in ProjectDeelTaken)
             {
                 if (zoekMaximaleDoorlooptijd(taak) > maximaledoorlooptijd)
                 {
                     maximaledoorlooptijd = zoekMaximaleDoorlooptijd(taak);
                 }
             }
-            return maximaledoorlooptijd;    
+            return maximaledoorlooptijd;
         }
-
-        public int berekenUrenTotaal()
-        {
-            int urentotaal = 0;
-
-            foreach (DeelTaak taak in ProjectDeelTaken)
-            {
-                urentotaal += taak.MinimaleUren;
-            }
-            return urentotaal;
-        }
-   }
+    }
 }

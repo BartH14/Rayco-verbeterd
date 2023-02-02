@@ -73,6 +73,8 @@ namespace Rayco_Planner
             MiBoPlannen.VoegDeelTaakToe(BitterBallenFrituren);
 
             projectSoorten.Add(OverspannenRaken);
+            projectSoorten.Add(MiBoPlannen);
+            projectSoorten.Add(MiBoPlannen);
 
             //project maken van projectsoort
             Project carriere = new Project("Carrière stress", "Bart", OverspannenRaken);

@@ -63,7 +63,7 @@ namespace Rayco_Planner.Forms
                 }
             }
 
-            Project project = new Project(NaamBox.Text, OpdrachtgeverBox.Text, gekozenProjectSoort);
+            Project nieuwproject = new Project(NaamBox.Text, OpdrachtgeverBox.Text, gekozenProjectSoort);
             this.Close();
         }
     }
