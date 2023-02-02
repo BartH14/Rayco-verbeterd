@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -60,6 +61,7 @@ namespace Rayco_Planner.Classes
         public int zoekMinimaleDoorlooptijd(DeelTaak taak)
         {
             int minimaleDoorloopTijd = taak.MinimaleUren;
+            if (taak.VoorgaandeTaak == null) return minimaleDoorloopTijd;
             if (taak.VoorgaandeTaak.Count == 0) return minimaleDoorloopTijd;
             else if( taak.VoorgaandeTaak.Count == 1)
             {
@@ -102,7 +104,8 @@ namespace Rayco_Planner.Classes
         private int zoekMaximaleDoorlooptijd(DeelTaak taak)
         {
             int maximaledoorlooptijd = 0;
-            if (taak.VoorgaandeTaak.Count == 0) return maximaledoorlooptijd;
+            if (taak.VoorgaandeTaak == null) return maximaledoorlooptijd;
+            else if (taak.VoorgaandeTaak.Count == 0) return maximaledoorlooptijd;
             else if (taak.VoorgaandeTaak.Count == 1)
             {
                 foreach (DeelTaak voorgaandetaak in taak.VoorgaandeTaak)

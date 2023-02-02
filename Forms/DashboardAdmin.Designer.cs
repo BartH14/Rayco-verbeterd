@@ -56,8 +56,7 @@
             this.projectledenToolStripMenuItem});
             this.HoofdMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.HoofdMenuStrip.Name = "HoofdMenuStrip";
-            this.HoofdMenuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.HoofdMenuStrip.Size = new System.Drawing.Size(914, 42);
+            this.HoofdMenuStrip.Size = new System.Drawing.Size(800, 33);
             this.HoofdMenuStrip.TabIndex = 0;
             this.HoofdMenuStrip.Text = "menuStrip1";
             this.HoofdMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.HoofdMenuStrip_ItemClicked);
@@ -65,7 +64,7 @@
             // startschermToolStripMenuItem
             // 
             this.startschermToolStripMenuItem.Name = "startschermToolStripMenuItem";
-            this.startschermToolStripMenuItem.Size = new System.Drawing.Size(153, 36);
+            this.startschermToolStripMenuItem.Size = new System.Drawing.Size(123, 29);
             this.startschermToolStripMenuItem.Text = "Startscherm";
             // 
             // projectenToolStripMenuItem
@@ -76,31 +75,31 @@
             this.projectSoortenToolStripMenuItem,
             this.projectToevoegenToolStripMenuItem});
             this.projectenToolStripMenuItem.Name = "projectenToolStripMenuItem";
-            this.projectenToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
+            this.projectenToolStripMenuItem.Size = new System.Drawing.Size(104, 29);
             this.projectenToolStripMenuItem.Text = "Projecten";
             // 
             // projectOverviewToolStripMenuItem
             // 
             this.projectOverviewToolStripMenuItem.Name = "projectOverviewToolStripMenuItem";
-            this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(297, 36);
+            this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
             this.projectOverviewToolStripMenuItem.Text = "Project overview";
             // 
             // takenToolStripMenuItem
             // 
             this.takenToolStripMenuItem.Name = "takenToolStripMenuItem";
-            this.takenToolStripMenuItem.Size = new System.Drawing.Size(297, 36);
+            this.takenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
             this.takenToolStripMenuItem.Text = "Project soorten";
             // 
             // projectSoortenToolStripMenuItem
             // 
             this.projectSoortenToolStripMenuItem.Name = "projectSoortenToolStripMenuItem";
-            this.projectSoortenToolStripMenuItem.Size = new System.Drawing.Size(297, 36);
+            this.projectSoortenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
             this.projectSoortenToolStripMenuItem.Text = "Project taken";
             // 
             // projectToevoegenToolStripMenuItem
             // 
             this.projectToevoegenToolStripMenuItem.Name = "projectToevoegenToolStripMenuItem";
-            this.projectToevoegenToolStripMenuItem.Size = new System.Drawing.Size(297, 36);
+            this.projectToevoegenToolStripMenuItem.Size = new System.Drawing.Size(237, 30);
             this.projectToevoegenToolStripMenuItem.Text = "Project toevoegen";
             this.projectToevoegenToolStripMenuItem.Click += new System.EventHandler(this.projectToevoegenToolStripMenuItem_Click);
             // 
@@ -110,27 +109,26 @@
             this.projectledenOverviewToolStripMenuItem,
             this.projectledenToevoegenToolStripMenuItem});
             this.projectledenToolStripMenuItem.Name = "projectledenToolStripMenuItem";
-            this.projectledenToolStripMenuItem.Size = new System.Drawing.Size(161, 36);
+            this.projectledenToolStripMenuItem.Size = new System.Drawing.Size(130, 29);
             this.projectledenToolStripMenuItem.Text = "Projectleden";
             // 
             // projectledenOverviewToolStripMenuItem
             // 
             this.projectledenOverviewToolStripMenuItem.Name = "projectledenOverviewToolStripMenuItem";
-            this.projectledenOverviewToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
+            this.projectledenOverviewToolStripMenuItem.Size = new System.Drawing.Size(284, 30);
             this.projectledenOverviewToolStripMenuItem.Text = "Projectleden overview";
             // 
             // projectledenToevoegenToolStripMenuItem
             // 
             this.projectledenToevoegenToolStripMenuItem.Name = "projectledenToevoegenToolStripMenuItem";
-            this.projectledenToevoegenToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
+            this.projectledenToevoegenToolStripMenuItem.Size = new System.Drawing.Size(284, 30);
             this.projectledenToevoegenToolStripMenuItem.Text = "Projectleden toevoegen";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(259, 93);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.richTextBox1.Location = new System.Drawing.Point(233, 85);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(623, 309);
+            this.richTextBox1.Size = new System.Drawing.Size(546, 336);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
@@ -140,19 +138,19 @@
             this.ProjectenLijst.FormattingEnabled = true;
             this.ProjectenLijst.Items.AddRange(new object[] {
             "Selecteer het project"});
-            this.ProjectenLijst.Location = new System.Drawing.Point(14, 48);
-            this.ProjectenLijst.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ProjectenLijst.Location = new System.Drawing.Point(12, 36);
             this.ProjectenLijst.Name = "ProjectenLijst";
-            this.ProjectenLijst.Size = new System.Drawing.Size(243, 39);
+            this.ProjectenLijst.Size = new System.Drawing.Size(213, 33);
             this.ProjectenLijst.TabIndex = 3;
             this.ProjectenLijst.Text = "Selecteer een project";
             this.ProjectenLijst.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // DoorlooptijdKnop
             // 
-            this.DoorlooptijdKnop.Location = new System.Drawing.Point(20, 113);
+            this.DoorlooptijdKnop.Location = new System.Drawing.Point(18, 85);
+            this.DoorlooptijdKnop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DoorlooptijdKnop.Name = "DoorlooptijdKnop";
-            this.DoorlooptijdKnop.Size = new System.Drawing.Size(217, 49);
+            this.DoorlooptijdKnop.Size = new System.Drawing.Size(190, 37);
             this.DoorlooptijdKnop.TabIndex = 4;
             this.DoorlooptijdKnop.Text = "Doorlooptijd";
             this.DoorlooptijdKnop.UseVisualStyleBackColor = true;
@@ -160,9 +158,10 @@
             // 
             // KritiekePadKnop
             // 
-            this.KritiekePadKnop.Location = new System.Drawing.Point(20, 168);
+            this.KritiekePadKnop.Location = new System.Drawing.Point(18, 126);
+            this.KritiekePadKnop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KritiekePadKnop.Name = "KritiekePadKnop";
-            this.KritiekePadKnop.Size = new System.Drawing.Size(217, 49);
+            this.KritiekePadKnop.Size = new System.Drawing.Size(190, 37);
             this.KritiekePadKnop.TabIndex = 5;
             this.KritiekePadKnop.Text = "Kritieke pad";
             this.KritiekePadKnop.UseVisualStyleBackColor = true;
@@ -170,9 +169,10 @@
             // 
             // TakenKnop
             // 
-            this.TakenKnop.Location = new System.Drawing.Point(20, 223);
+            this.TakenKnop.Location = new System.Drawing.Point(18, 167);
+            this.TakenKnop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TakenKnop.Name = "TakenKnop";
-            this.TakenKnop.Size = new System.Drawing.Size(217, 49);
+            this.TakenKnop.Size = new System.Drawing.Size(190, 37);
             this.TakenKnop.TabIndex = 6;
             this.TakenKnop.Text = "Toegewezen taken";
             this.TakenKnop.UseVisualStyleBackColor = true;
@@ -180,9 +180,9 @@
             // 
             // DashboardAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TakenKnop);
             this.Controls.Add(this.KritiekePadKnop);
             this.Controls.Add(this.DoorlooptijdKnop);
@@ -190,7 +190,6 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.HoofdMenuStrip);
             this.MainMenuStrip = this.HoofdMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DashboardAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardAdmin";

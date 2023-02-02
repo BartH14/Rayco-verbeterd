@@ -65,13 +65,13 @@ namespace Rayco_Planner.Forms
         private void DoorlooptijdKnop_Click(object sender, EventArgs e)
         {
             int doorlooptijd = gekozenProject.projectSoort.berekenenMinimaleDoorlooptijd();
-            richTextBox1.Text = ($"De doorlooptijd is {doorlooptijd}.");
+            richTextBox1.Text = ($"De minimale doorlooptijd is {doorlooptijd} uur.");
         }
 
         private void KritiekePadKnop_Click(object sender, EventArgs e)
         {
             int kritiekepad = gekozenProject.projectSoort.berekenMaximaleDoorlooptijd();
-            richTextBox1.Text = ($"De maximale doorlooptijd is {kritiekepad}.");
+            richTextBox1.Text = ($"De maximale doorlooptijd is {kritiekepad} uur.");
         }
 
         private void TakenKnop_Click(object sender, EventArgs e)

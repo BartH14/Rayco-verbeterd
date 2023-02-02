@@ -60,8 +60,8 @@ namespace Rayco_Planner
             DeelTaak VacaturesAfstruinen = new DeelTaak(2, "Vacatures afstruinen", "Moedeloos worden van HR en recruiters", 1, 5, "developer", new List<DeelTaak> { StressErvaren }, 1);
             DeelTaak AfgewezenWorden = new DeelTaak(3, "Afgewezen worden", "Sorry, een andere kandidaat had een beter profiel", 1, 1, "developer", new List<DeelTaak> { VacaturesAfstruinen }, 1);
 
-            DeelTaak SpeciaalBierHalen = new DeelTaak(1, "Speciaalbier halen", "Een gecureerde lijst van untappd afplukken", 1, 5, "Developer", null, 1);
-            DeelTaak BitterBallenFrituren = new DeelTaak(2, "Bitterballen frituren", "Een droogje voor bij het natje", 1, 2, "Developer", new List<DeelTaak> { SpeciaalBierHalen }, 1);
+            DeelTaak SpeciaalBierHalen = new DeelTaak(1, "Speciaalbier halen", "Een gecureerde lijst van untappd afplukken", 1, 5, "developer", null, 1);
+            DeelTaak BitterBallenFrituren = new DeelTaak(2, "Bitterballen frituren", "Een droogje voor bij het natje", 1, 2, "developer", new List<DeelTaak> { SpeciaalBierHalen }, 1);
 
 
             //deeltaken aan een projectsoort toevoegen
@@ -81,8 +81,9 @@ namespace Rayco_Planner
 
             //projectlid 28 jaar na dato nog eens maken
             ProjectLid Bart = projectLeden.FirstOrDefault(projectlid => projectlid.Naam == "Bart Haagmans");
+            Bart.Rol = "developer";
 
-            //Projectlid toewijzen aan project
+            //Projectlid toewijzen aan projecten
             carriere.ProjectLidToevoegen(Bart);
             blokafronden.ProjectLidToevoegen(Bart);
 

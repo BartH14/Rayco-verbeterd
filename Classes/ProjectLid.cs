@@ -10,7 +10,7 @@ namespace Rayco_Planner.Classes
     {
         public int Id { get; private set; }
         public string Naam { get; private set; }
-        public string Rol { get; private set; }
+        public string Rol { get; set; }
         public bool AdminRechten { get; private set; } = false;
         public List<Project> ToegewezenProjecten { get; set; } = new List<Project> { };
         public List<Taak> ToegewezenTaken { get; set; } = new List<Taak> { };
